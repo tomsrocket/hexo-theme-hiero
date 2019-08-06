@@ -1,3 +1,6 @@
+home: Start
+archives: Archiv
+about: Über mich
 categories: Kategorien
 search: Suche
 tags: Tags
@@ -9,11 +12,26 @@ comment: Kommentare
 archive_a: Archiv
 archive_b: "Archive: %s"
 page: Seite %d
-recent_posts: letzter Beitrag
+recent_posts: Letzte Beiträge
 newer: Neuer
 older: Älter
 share: Teilen
-powered_by: Powered by
+theme_by: Powered by
 rss_feed: RSS Feed
 category: Kategorie
 tag: Tag
+connect: 'Social Media Links'
+post_total_count: Insgesamt gibt es bisher %d Beiträge.
+read_more: weiterlesen →
+contents: Inhalt
+none: Kein(e)
+posted_on: Geschrieben am
+donation:
+    button_text: 'Spenden'
+insight:
+    hint: 'Type something...'
+    posts: 'Posts'
+    pages: 'Pages'
+    categories: 'Categories'
+    tags: 'Tags'
+    untitled: '(Untitled)'
