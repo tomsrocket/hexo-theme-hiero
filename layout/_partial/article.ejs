@@ -47,11 +47,26 @@
       <% if (!index && theme.donate.enable){ %>
         <%- partial('donate') %>
       <% } %>
-            
+
       <% if (!index && post.comments && (theme.gentie_productKey || theme.duoshuo_shortname || theme.disqus_shortname || theme.uyan_uid || theme.wumii || theme.livere_shortname || theme.gitment.owner)){ %>
         <%- partial('comment') %>
       <% } %>
     </footer>
+    <div class="article-entry">
+      <% if (!index){ %>
+
+        <h2>Kommentare</h2>
+
+        <script
+          data-isso="//comments.input23.de/channel23"
+          data-isso-lang="de"
+          src="//comments.input23.de/channel23/js/embed.min.js"></script>
+
+        <section id="isso-thread"></section>
+
+      <% } %>
+    </div>
+
   </div>
   <% if (!index){ %>
     <%- partial('post/nav') %>
