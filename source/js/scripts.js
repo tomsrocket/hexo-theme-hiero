@@ -98,13 +98,14 @@
   // Caption
   $('.article-entry').each(function(i){
     $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
-      if ($(this).parent().parent().hasClass('entry-thumbnail')) return;
+      $pap = $(this).parent()
+      if ($pap.is('a')) return;
+      if ($pap.hasClass('fancybox')) return;
+      if ($pap.parent().hasClass('entry-thumbnail')) return;
 
       var alt = this.alt;
 
       if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-
       $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
     });
 
