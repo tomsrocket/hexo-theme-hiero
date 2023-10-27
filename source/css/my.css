@@ -3,3 +3,20 @@ type your custom css here
 在本文件键入您的自定义CSS
 升级主题文件时请注意保护本文件，防止意外覆盖。
 */
+
+.article-header {
+    background-color: #000;
+    padding: 12px 0 4px 20px;
+    margin-left: -20px;
+}
+
+.article-header h1 a, .article-header h1 {
+    color: #fff;
+    text-decoration: none;
+    font-size: 42px;
+}
+
+.article-header h1 a:hover {
+    color: #fff;
+    text-decoration:underline;
+}
