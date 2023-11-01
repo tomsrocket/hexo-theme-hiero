@@ -20,3 +20,71 @@ type your custom css here
     color: #fff;
     text-decoration:underline;
 }
+
+.article-more-link a {
+    color: #f00;
+    padding: 13px 20px 0 20px;
+    font-size:22px;
+    position: relative;
+    z-index: 0;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -2;
+        left: -50%;
+        top: -160%;
+        width: 200%;
+        height: 400%;
+        opacity: 0.3;
+        background-color: #f00;
+        background-repeat: no-repeat;
+        background-size: 50% 50%, 50% 50%;
+
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 6px;
+        top: 6px;
+        width: calc(100% - 12px);
+        height: calc(100% - 12px);
+        background: white;
+        border-radius: 5px;
+
+    }
+}
+
+.article-more-link a:hover {
+    &::before {
+       opacity: 1;
+       background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+       background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
+       animation: rotate 4s linear infinite;
+    }
+
+    &::after {
+       animation: opacityChange 3s infinite alternate;
+    }
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+@keyframes opacityChange {
+    50% {
+        opacity: .4;
+    }
+    100% {
+        opacity: .8;
+    }
+}
